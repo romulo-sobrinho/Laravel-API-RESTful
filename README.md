@@ -8,7 +8,9 @@
 
 <h2 align="center">Objetivo</h2>
 <p align="center">
-  Desenvolver uma API com o padrão REST, com todos os métodos CRUD para dados do seu cão doméstico. A aplicação foi construída com alguns diferenciais: uso de form request para validações, utilização de softdelete para não excluir permanentemente um registro, além de tratamento de exceções</p>
+  Desenvolver uma API com o padrão REST, com todos os métodos CRUD para dados do seu cão doméstico. A aplicação foi construída com alguns diferenciais: uso de form request para validações, utilização de softdelete para não excluir permanentemente um registro, bem como tratamento de exceções.
+  Além disso foi feita a tradução da aplicação para português brasileiro, isso impacta as mensagens de validações do form request.
+</p>
 <br>
 <br>
 
