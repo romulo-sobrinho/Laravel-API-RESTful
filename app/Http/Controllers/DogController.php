@@ -5,9 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DogRequest;
 use App\Models\DogModel;
-use Exception;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Http\Request;
 
 class DogController extends Controller
 {
@@ -56,6 +53,7 @@ class DogController extends Controller
 
     public function destroy(DogModel $dog)
     {
-        return $dog->delete();
+        $dog->delete();
+        return response()->json([], 204);
     }
 }
