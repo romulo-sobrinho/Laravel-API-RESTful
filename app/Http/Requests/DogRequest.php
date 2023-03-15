@@ -3,6 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\Validator;
 
 class DogRequest extends FormRequest
 {
@@ -21,10 +24,42 @@ class DogRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'name' => 'required|string|max:40',
+        $rules = [
             'breed' => 'required|string|max:40',
-            'age' => 'required|integer|max:40',
+            'life_expectancy' => 'required|integer',
+            'height' => 'required|numeric|between:0,99.99',
+        ];
+
+        if ($this->method() === 'PATCH') {
+            $rules['breed'] = [
+                'required',
+                'string',
+                'max:40',
+                Rule::unique('dogs')->ignore($this->id),
+            ];
+
+            $rules['life_expectancy'] = [
+                'required',
+                'integer',
+            ];
+
+            $rules['height'] = [
+                'required',
+                'numeric',
+                'between:0,99.99',
+            ];
+        }
+
+        return $rules;
+    }
+
+
+    public function messages(): array
+    {
+        return [
+            'breed.required' => 'A raça de cães é um campo obrigatório',
+            'life_expectancy.required' => 'A expectativa de vida é um campo obrigatório',
+            'height.required' => 'A altura é um campo obrigatório'
         ];
     }
 }

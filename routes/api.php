@@ -13,3 +13,5 @@ Route::prefix('dogs')->controller(DogController::class)->group(
         Route::delete('/destroy/{dog}', 'destroy');
     }
 );
+
+// Route::apiResource(DogController::class);

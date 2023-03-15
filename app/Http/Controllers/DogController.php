@@ -11,49 +11,87 @@ class DogController extends Controller
     public function index()
     {
         $dogs = DogModel::all();
-        return response()->json($dogs, 200);
-        // if ($dogs === []) {
-        //     return response()->json($dogs, 200);
-        // } else {
-        //     return response()->json(['message' => 'Nenhum registro encontrado na base dados!'], 500);
-        // }
 
+        if (!$dogs) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Erro ao recuperar os registros de cães'
+            ], 500);
+        }
 
-        // try {
-        //     $dogs = DogModel::all();
-        //     return response()->json($dogs, 200);
-        // } catch (Exception $e) {
-        //     return response()->json(['message' => 'Nenhum registro encontrado na base dados!', 'error' => $e->getMessage()], 500);
-        // }
+        return response()->json([
+            'success' => true,
+            'data' => $dogs
+        ], 200);
     }
 
     public function show(DogModel $dog)
     {
-        return response()->json($dog, 200);
-        // try {
-        //     return response()->json($dog, 200);
-        // } catch (ModelNotFoundException $e) {
-        //     return response()->json(['message' => 'Dog não encontrado!', 'error' => $e->getMessage()], 422);
-        // } catch (Exception $e) {
-        //     return response()->json(['message' => 'Ocorreu um erro ao processar a solicitação!', 'error' => $e->getMessage()], 500);
-        // }
+        if (!$dog) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Raça de cães não encontrada!'
+            ], 404);
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => $dog
+        ], 200);
     }
 
     public function store(DogRequest $request)
     {
-        return DogModel::create($request->all());
+        $dog = DogModel::create($request->all());
+
+        if (!$dog) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Erro ao cadastrar a raça de cães'
+            ]);
+        }
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Raça de cães cadastrada com sucesso',
+            'data' => $dog
+        ], 201);
     }
 
     public function update(DogRequest $request, DogModel $dog)
     {
         $dog->update($request->all());
-        return $dog;
+
+        if (!$dog) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Erro ao atualizar a raça de cães'
+            ], 500);
+        }
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Raça de cães atualizada com sucesso!',
+            'data' => $dog
+        ], 200);
     }
 
 
     public function destroy(DogModel $dog)
     {
-        $dog->delete();
-        return response()->json([], 204);
+        $deleted = $dog->delete();
+
+        if (!$deleted) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Erro ao excluir a raça de cães'
+            ], 500);
+        }
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Raça de cães excluída com sucess!',
+            'data' => [],
+        ], 200);
     }
 }

@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('dogs', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('breed');
-            $table->integer('age');
+            $table->string('breed')->unique();
+            $table->integer('life_expectancy');
+            $table->string('height');
             $table->timestamps();
             $table->softDeletes();
         });
