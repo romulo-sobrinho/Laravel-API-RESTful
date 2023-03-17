@@ -34,17 +34,27 @@
 <br>
 <h3 align="center">Realizando a busca de dados (INDEX) com Postman - Método GET</h3>
 
+![index](https://user-images.githubusercontent.com/68918326/225948520-4ebcb603-d575-4eb6-9660-7084f37a8642.gif)
+
 <br>
 <h3 align="center">Realizando a busca de um dado específico (SHOW) com Postman - Método GET</h3>
+
+![show](https://user-images.githubusercontent.com/68918326/225948899-af2afdfd-2c55-4dd9-af5f-32aabdb6b0ae.gif)
 
 <br>
 <h3 align="center">Realizando inserção de dados (STORE) com Postman - Método POST</h3>
 
+![store](https://user-images.githubusercontent.com/68918326/225948030-09a9b229-91f2-4eee-bb2f-df67a43d20d6.gif)
+
 <br>
 <h3 align="center">Realizando a atualização de dados (UPDATE) com Postman - Método PATCH</h3>
 
+![update](https://user-images.githubusercontent.com/68918326/225949518-b42adb03-1db6-41dd-b124-b94109a5c7c4.gif)
+
 <br>
 <h3 align="center">Realizando a exclusão (desativação) de dados (DELETE) com Postman - Método DELETE</h3>
+
+![delete](https://user-images.githubusercontent.com/68918326/225950004-fd33b0a9-5b59-4473-acd9-695664df1510.gif)
 
 <br>
 <br>
