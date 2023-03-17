@@ -19,11 +19,11 @@
 <br> 
 
   #### Regras de validação
-![RegrasValidação](https://user-images.githubusercontent.com/68918326/225942610-bf31c904-ac1d-4802-83cd-421c6581c26b.PNG)
+![RegrasValidação](https://user-images.githubusercontent.com/68918326/225944501-ef95a0ad-d110-466b-8801-0b36f5d69fed.PNG)
   #### Mensagens Personalizadas
-![MensagemPersonalizada](https://user-images.githubusercontent.com/68918326/225942720-fae3c49f-8337-4941-a44e-dbf585bc614d.PNG)
+![MensagemPersonalizada](https://user-images.githubusercontent.com/68918326/225944623-98221568-1efc-4d4e-b48c-3f69e7cb6b40.PNG)
   #### Tratamento de erros
-![TratamentoErros](https://user-images.githubusercontent.com/68918326/225942815-f102f547-e0d8-47f6-9925-6414a20d72e6.PNG)
+![TratamentoErros](https://user-images.githubusercontent.com/68918326/225944725-82ca5566-d0a8-465d-9625-93815b82368c.PNG)
 
 <br>
 <br> 
