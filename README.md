@@ -15,6 +15,20 @@
 <br>
 
 
+<h2 align="center">🚨Diferenciais da API🚨</h2>
+<br> 
+
+  #### Validação com form request
+    ✔️ Mensagens personalizadas para as validações
+    ✔️ Mensagem personalizada para erro status code 422
+  #### Handler.php
+    ✔️ Sobrescrita do método render para mensagem personalizada de erro status code 404
+
+
+<br>
+<br> 
+
+
 <h2 align="center">💡Form Request💡</h2>
 <br> 
 
