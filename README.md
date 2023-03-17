@@ -15,6 +15,20 @@
 <br>
 
 
+<h2 align="center">💡Form Request💡</h2>
+<br> 
+
+  #### Regras de validação
+![RegrasValidação](https://user-images.githubusercontent.com/68918326/225942610-bf31c904-ac1d-4802-83cd-421c6581c26b.PNG)
+  #### Mensagens Personalizadas
+![MensagemPersonalizada](https://user-images.githubusercontent.com/68918326/225942720-fae3c49f-8337-4941-a44e-dbf585bc614d.PNG)
+  #### Tratamento de erros
+![TratamentoErros](https://user-images.githubusercontent.com/68918326/225942815-f102f547-e0d8-47f6-9925-6414a20d72e6.PNG)
+
+<br>
+<br> 
+
+
 <h2 align="center">Preview</h2>
 
 <br>
@@ -32,9 +46,9 @@
 <br>
 <h3 align="center">Realizando a exclusão (desativação) de dados (DELETE) com Postman - Método DELETE</h3>
 
+<br>
+<br>
 
-<br>
-<br>
 
 <h2 align="center">🚀Testando a API🚀</h2>
 <br> 
