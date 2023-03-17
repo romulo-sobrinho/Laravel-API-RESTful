@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DogRequest;
 use App\Models\DogModel;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class DogController extends Controller
 {
@@ -27,12 +28,17 @@ class DogController extends Controller
 
     public function show(DogModel $dog)
     {
-        if (!$dog) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Raça de cães não encontrada!'
-            ], 404);
-        }
+        // try {
+        //     return response()->json([
+        //         'success' => true,
+        //         'data' => $dog
+        //     ], 200);
+        // } catch (ModelNotFoundException $eh) {
+        //     return response()->json([
+        //         'success' => false,
+        //         'message' => 'Raça de cães não encontrada!'
+        //     ], 404);
+        // }
 
         return response()->json([
             'success' => true,
