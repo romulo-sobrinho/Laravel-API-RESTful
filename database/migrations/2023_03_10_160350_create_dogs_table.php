@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('breed')->unique();
             $table->integer('life_expectancy');
-            $table->string('height');
+            $table->decimal('height');
             $table->timestamps();
             $table->softDeletes();
         });
