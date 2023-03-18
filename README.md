@@ -95,5 +95,5 @@
 <br> 
 
 <hr>
-<h3 align="center">🎖️PROJETO EM CONCLUÍDO🎖️</h3>
+<h3 align="center">🎖️PROJETO CONCLUÍDO🎖️</h3>
 <hr>
