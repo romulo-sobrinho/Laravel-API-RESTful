@@ -23,10 +23,9 @@
     ✔️ Mensagem personalizada para erro status code 422
   #### Handler.php
     ✔️ Sobrescrita do método render para mensagem personalizada de erro status code 404
-
-
+    
 <br>
-<br> 
+<br>
 
 
 <h2 align="center">💡Form Request💡</h2>
