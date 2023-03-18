@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\DogRequest;
 use App\Models\DogModel;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Log;
 
 class DogController extends Controller
 {
@@ -19,6 +20,8 @@ class DogController extends Controller
                 'data' => $dogs
             ], 200);
         } catch (\Throwable $th) {
+            Log::error("Houve erro ao pesquisar todos os registros no banco de dados", [$th->getMessage(), $th->getTraceAsString()]);
+
             return response()->json([
                 'success' => false,
                 'message' => 'Erro ao recuperar os registros de cães'
@@ -45,6 +48,8 @@ class DogController extends Controller
                 'data' => $dog
             ], 201);
         } catch (\Throwable $th) {
+            Log::error("Houve erro ao criar o registro no banco de dados", [$th->getMessage(), $th->getTraceAsString()]);
+
             return response()->json([
                 'success' => false,
                 'message' => 'Erro ao cadastrar a raça de cães'
@@ -63,6 +68,8 @@ class DogController extends Controller
                 'data' => $dog
             ], 200);
         } catch (\Throwable $th) {
+            Log::error("Houve erro ao atualizar o registro no banco de dados", [$th->getMessage(), $th->getTraceAsString()]);
+
             return response()->json([
                 'success' => false,
                 'message' => 'Erro ao atualizar a raça de cães'
@@ -82,6 +89,8 @@ class DogController extends Controller
                 'data' => [],
             ], 200);
         } catch (\Throwable $th) {
+            Log::error("Houve erro ao excluir o registro no banco de dados", [$th->getMessage(), $th->getTraceAsString()]);
+
             return response()->json([
                 'success' => false,
                 'message' => 'Erro ao excluir a raça de cães'
