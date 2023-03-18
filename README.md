@@ -26,6 +26,9 @@
 
   #### Rota resource
     ✔️ Em vez de uma rota para cada método, é utilizado a rota resource
+
+  #### Logs de erros
+    ✔️ Gravação de registros de logs de erros da aplicação
     
 <br>
 <br>
