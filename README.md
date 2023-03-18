@@ -23,6 +23,9 @@
     ✔️ Mensagem personalizada para erro status code 422
   #### Handler.php
     ✔️ Sobrescrita do método render para mensagem personalizada de erro status code 404
+
+  #### Rota resource
+    ✔️ Em vez de uma rota para cada método, é utilizado a rota resource
     
 <br>
 <br>
@@ -80,17 +83,17 @@
     ✔️ php artisan serve
   #### Acesse as rotas localmente
     ✔️ http://127.0.0.1:8000/api
-  #### Endereço local das rotas da API
+  #### Endereço local das rotas da API - Utilizado rota resource
     ✔️ index: http://127.0.0.1:8000/api/dogs/
-    ✔️ show:  http://127.0.0.1:8000/api/dogs/show/{id}
-    ✔️ store: http://127.0.0.1:8000/api/dogs/store
-    ✔️ patch: http://127.0.0.1:8000/api/dogs/update/{id}
-    ✔️ delete: http://127.0.0.1:8000/api/dogs/destroy/{id}
+    ✔️ show:  http://127.0.0.1:8000/api/dogs/{id}
+    ✔️ store: http://127.0.0.1:8000/api/dogs/
+    ✔️ patch: http://127.0.0.1:8000/api/dogs/{id}
+    ✔️ delete: http://127.0.0.1:8000/api/dogs/{id}
 
 
 <br>
 <br> 
 
 <hr>
-<h3 align="center">🎖️PROJETO EM CONSTRUÇÃO🎖️</h3>
+<h3 align="center">🎖️PROJETO EM CONCLUÍDO🎖️</h3>
 <hr>
